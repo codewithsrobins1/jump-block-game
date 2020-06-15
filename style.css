@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+html{
+    font-size: 62.5%;   /*Set rem to 10px */
+}
+
+#game-container{
+    width: 50rem;
+    height: 20rem;
+    border: 2px solid black;
+}
+
+#game-character{
+    width: 2rem;
+    height: 5rem;
+    background-color: red;
+    position: relative;
+    top: 15rem;
+}
+
+/*Class added when JS Function is Used */
+.animate{
+    animation: jump 500ms infinite;
+}
+
+
+#game-block{
+    width: 2rem;
+    height: 2rem;
+    background-color: blue;
+    position: relative;
+    top: 13rem;
+    left: 48rem;
+    animation: block 1.5s infinite linear;    /* animation linear = same speed from beginning to end */
+}
+
+
+
+
+/* Animations */
+
+/* Block Animation */
+@keyframes block {      
+    0% {left: 48rem}
+    100%{left: -4rem}
+}
+
+/* Character Animation */
+@keyframes jump {
+    0% {top: 15rem}
+    30% {top: 10rem}
+    70% {top: 10rem}
+    100% {top: 15rem}   /* allows animation to come back down */
+}
